@@ -4,9 +4,19 @@ public class RecursivePow {
 
     public static double calculate(double base, int exponent) {
         if (exponent < 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(String.format("exponent = %d < 0", exponent));
         }
-        if (Double.compare(exponent, 0) == 0) {
+        if (Double.compare(base, 0) == 0) {
+            if (exponent == 0) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        if (Double.compare(base, 1) == 0){
+            return 1;
+        }
+        if (exponent == 0) {
             return 1;
         }
         try {
@@ -14,10 +24,5 @@ public class RecursivePow {
         } catch (StackOverflowError er) {
             return Double.POSITIVE_INFINITY;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Math.pow(5,5));
-        System.out.println(calculate(5,5));
     }
 }

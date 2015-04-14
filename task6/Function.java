@@ -4,16 +4,17 @@ import static java.lang.Math.exp;
 import static java.lang.Math.log;
 
 /**
- * Class Function by means of static method getValue determines the value of function y(a, x)=log2(x-4)+exp(2a-x)
+ * Class Function determines by means of static method getValue the value of function y(a, x)=log2(x-4)+exp(2*a-x)
  * depending on argument a and x values.
  */
 public class Function {
+    private Function(){}
     /**
      * Determines and returns the value of function y(a, x)=log2(x-4)+exp(2a-x) depending on argument a and x values.
      * Additionally performs range of definition check for x argument.
      *
-     * @param x double value x argument of function y(a, x)=log2(x-4)+exp(2a-x).
-     * @param a double value a argument of function y(a, x)=log2(x-4)+exp(2a-x).
+     * @param x double value argument of function y(a, x)=log2(x-4)+exp(2a-x).
+     * @param a double value argument of function y(a, x)=log2(x-4)+exp(2a-x).
      * @return double value of function y(a, x)=log2(x-4)+exp(2a-x).
      * @throws java.lang.IllegalArgumentException In case if value of x argument is out of range of definition.
      */

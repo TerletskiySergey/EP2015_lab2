@@ -257,6 +257,7 @@ public class FunctionTest {
         }
         if (Double.isNaN(actual) || Double.isInfinite(actual)) {
             System.out.println("Test failed");
+            return;
         }
         BigDecimal expected = new BigDecimal(this.expected);
         BigDecimal actual = new BigDecimal(this.actual);
